@@ -1,0 +1,23 @@
+@import '../../node_modules/css-reset-and-normalize-sass/scss/reset-and-normalize';
+@import 'https://fonts.googleapis.com/css?family=Roboto';
+
+body {
+  background: #fff;
+  font-family: 'Roboto', 'Helvetica', Arial, sans-serif;
+
+  &, 
+  & * {
+    box-sizing: border-box;
+  }
+
+  section {
+    background: #fff;
+    display: block;
+    position: relative;
+  }
+
+  container {
+    display: block;
+    position: relative;
+  }
+}

@@ -1,0 +1,22 @@
+@mixin fullsize() {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+@mixin notch() {
+  clip-path: polygon(0 0, calc(50% - 35px) 0%, 50% 35px, calc(50% + 35px) 0%, 100% 0, 100% 100%, 0 100%);
+  
+  &::before {
+    background: url('../img/shad-down.png') no-repeat center center;
+    content: "";
+    display: block;
+    height: 50px;
+    left: 50%;
+    margin-left: -50px;
+    position: absolute;
+    top: 0;
+    width: 100px;
+  }
+}

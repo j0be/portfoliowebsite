@@ -1,0 +1,5 @@
+.about {
+  @include notch();
+  margin-top: -50px;
+  padding: 100px 20px;
+}
