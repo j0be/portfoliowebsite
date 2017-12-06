@@ -4,20 +4,35 @@
 body {
   background: #fff;
   font-family: 'Roboto', 'Helvetica', Arial, sans-serif;
-
+  font-size: 11px;
+  
   &, 
   & * {
     box-sizing: border-box;
-  }
-
-  section {
-    background: #fff;
-    display: block;
-    position: relative;
   }
 
   container {
     display: block;
     position: relative;
   }
+}
+
+section {
+  background: #fff;
+  display: block;
+  padding: 100px 20px;
+  position: relative;
+  &.notch {
+    @include notch();
+  }
+}
+
+h2.logo {
+
+}
+
+.desc {
+  color: #666;
+  font-size: 1.2em;
+  line-height: 1.5em;
 }

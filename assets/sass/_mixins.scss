@@ -7,9 +7,10 @@
 
 @mixin notch() {
   clip-path: polygon(0 0, calc(50% - 35px) 0%, 50% 35px, calc(50% + 35px) 0%, 100% 0, 100% 100%, 0 100%);
-  
+  margin-top: -35px;
+
   &::before {
-    background: url('../img/shad-down.png') no-repeat center center;
+    background: url('../img/shad-down.png') no-repeat top center;
     content: "";
     display: block;
     height: 50px;

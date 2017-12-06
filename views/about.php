@@ -1,7 +1,7 @@
-<section name="about" class="about">
+<section name="about" class="about notch">
   <div class="content">
     <div class="box">
-        <h2>Ronald Troyer</h2>
+        <h2 class="logo">About Ronald Troyer</h2>
         <div class="desc">
             <div>
                 <p>With more than a decade of designing and developing, I have worked with clients both large and small. Everything I do reflects my passion for making each project be nothing short of extraordinary.</p>

@@ -12,6 +12,9 @@
   <?php
     include_once "./views/header.php";
     include_once "./views/about.php";
+    include_once "./views/services.php";
+    include_once "./views/portfolio.php";
+    include_once "./views/contact.php";
   ?>
 </container>
 </body>

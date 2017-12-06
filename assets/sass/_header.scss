@@ -12,8 +12,10 @@ body {
   .header {
     background: transparent;
     height: 700px;
+    padding: 0;
     position: relative;
     transform-style: preserve-3d;
+    
     &::before,
     &::after {
       @include fullsize();
@@ -63,7 +65,7 @@ body {
       .block {
         background: rgba($PaletteBlack, 1) url('../img/header-2.png') no-repeat;
         color: rgba($PaletteWhite, .8);
-        display: inline-block;
+        display: block;
         float: left;
         font-family: 'Helvetica', Arial, sans-serif;
         font-size: 10px;
@@ -72,6 +74,8 @@ body {
         margin: 10px;
         max-height: 36vw;
         max-width: 36vw;
+        min-height: 130px;
+        min-width: 130px;
         padding: 15px;
         position: relative;
         text-align: left;
