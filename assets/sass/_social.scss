@@ -1,3 +1,9 @@
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+@include sprites($spritesheet-sprites);
+
 section.social {
   @include clearfix;
   background-color: $PaletteAccentLightest;
@@ -5,14 +11,27 @@ section.social {
     darken($PaletteAccentLightest, 10%) 0%,
     darken($PaletteAccentLightest, 5%) 20%,
     $PaletteAccentLightest 100%);
-  padding: 0;
+  padding: 45px 0;
 
   .socialitem {
     @include col('xs', 12);
-    @include col('sm', 4);
+    @include col('sm', 2);
     display: block;
     font-size: 0;
-    height: 200px;
-    
+    height: 160px;
+    margin: 1em 0;
+
+    > a, span {
+      display: block;
+      margin: 0 auto;
+      opacity: .5;
+      transform: scale(.6);
+      transition: .3s opacity ease-in-out;
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+
   }
 }
