@@ -1,0 +1,18 @@
+section.social {
+  @include clearfix;
+  background-color: $PaletteAccentLightest;
+  background: linear-gradient(to bottom,
+    darken($PaletteAccentLightest, 10%) 0%,
+    darken($PaletteAccentLightest, 5%) 20%,
+    $PaletteAccentLightest 100%);
+  padding: 0;
+
+  .socialitem {
+    @include col('xs', 12);
+    @include col('sm', 4);
+    display: block;
+    font-size: 0;
+    height: 200px;
+    
+  }
+}

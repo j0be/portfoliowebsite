@@ -1,127 +1,118 @@
-body {
-  background: $PaletteDarkest url('../img/header.jpg') no-repeat center center;
-  background-size: cover;
-
-  > container {
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-    perspective: 300px;
+section.header {
+  background: transparent;
+  height: 700px;
+  padding: 0;
+  position: relative;
+  transform-style: preserve-3d;
+  
+  &::before,
+  &::after {
+    @include fullsize();
+    content: "";
+    position: absolute;
+    z-index: 0;
   }
-
-  .header {
-    background: transparent;
-    height: 700px;
-    padding: 0;
-    position: relative;
-    transform-style: preserve-3d;
-    
-    &::before,
-    &::after {
-      @include fullsize();
-      content: "";
-      position: absolute;
-      z-index: 0;
+  &::before {
+    background: url('../img/header-1.png') no-repeat top left;
+    background-size: auto 90%;
+    transform: translateZ(-1200px) scale(6) translate(7vw, -9%);
+    @media (max-width: 720px) {
+      margin-left: -80vw;
     }
-    &::before {
-      background: url('../img/header-1.png') no-repeat top left;
-      background-size: auto 90%;
-      transform: translateZ(-1200px) scale(6) translate(7vw, -9%);
-      @media (max-width: 720px) {
-        margin-left: -80vw;
-      }
-    }
-    &::after {
-      background: url('../img/header-2.png') no-repeat bottom right;
-      background-size: auto 80%;
-      transform: translateZ(-300px) scale(2) translate(7vw, -9%);
-    }
-    container {
-      display: block;
-      position: relative;
-      text-align: center;
-      z-index: 1;
-      h1 a {
-        background: url('../img/sig-lo.png') no-repeat center center;
-        background-size: contain;
-        display: inline-block;
-        font-size: 0;
-        height: 116px;
-        margin: 30px 0 30px 60px;
-        max-width: 50vw;
-        width: 300px;
-      }
-    }
-    .logoblock {
-      animation: rotate .3s 1;
-      animation-delay: .5s;
-      animation-fill-mode: forwards;
-      animation-timing-function: ease-in-out;
+  }
+  &::after {
+    background: url('../img/header-2.png') no-repeat bottom right;
+    background-size: auto 80%;
+    transform: translateZ(-300px) scale(2) translate(7vw, -9%);
+  }
+  container {
+    text-align: center;
+    z-index: 1;
+    h1 a {
+      background: url('../img/sig-lo.png') no-repeat center center;
+      background-size: contain;
       display: inline-block;
-      margin: 2.5em auto 0;
-      text-transform: uppercase;
-      transform: rotate(45deg);
-      
-      .block {
-        background: rgba($PaletteBlack, 1) url('../img/header-2.png') no-repeat;
-        color: rgba($PaletteWhite, .8);
-        display: block;
-        float: left;
-        font-family: 'Helvetica', Arial, sans-serif;
-        font-size: 10px;
-        height: 150px;
-        letter-spacing: .55em;
-        margin: 10px;
-        max-height: 36vw;
-        max-width: 36vw;
-        min-height: 130px;
-        min-width: 130px;
-        padding: 15px;
-        position: relative;
-        text-align: left;
-        text-decoration: none;
-        transition: .3s background-color ease-in-out, .3s color ease-in-out, .1s top cubic-bezier(0, 0.5, 0.5, 1);
-        top: 0;
-        width: 150px;
+      font-size: 0;
+      height: 116px;
+      margin: 30px 0 30px 60px;
+      max-width: 50vw;
+      width: 300px;
+    }
+  }
+  .logoblock {
+    animation: rotate .3s 1;
+    animation-delay: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    display: inline-block;
+    margin: 2.5em auto 0;
+    text-transform: uppercase;
+    transform: rotate(45deg);
+    
+    .block {
+      background: rgba($PaletteBlack, 1) url('../img/header-2.png') no-repeat;
+      color: rgba($PaletteWhite, .8);
+      display: block;
+      float: left;
+      font-family: 'Helvetica', Arial, sans-serif;
+      font-size: 10px;
+      height: 150px;
+      letter-spacing: .55em;
+      margin: 10px;
+      max-height: 36vw;
+      max-width: 36vw;
+      min-height: 130px;
+      min-width: 130px;
+      padding: 15px;
+      position: relative;
+      text-align: left;
+      text-decoration: none;
+      transition: .3s background-color ease-in-out,
+        .3s color ease-in-out,
+        .1s top cubic-bezier(0, 0.5, 0.5, 1);
+      top: 0;
+      width: 150px;
 
+      &::after {
+        background-color: #fff;
+        content: "";
+        height: 1px;
+        left: 1.4em;
+        opacity: 0;
+        position: absolute;
+        right: 100%;
+        top: 3.6em;
+        transition: .2s all ease-in-out;
+      }
+      
+      &:hover {
+        background-color: rgba($PaletteBlack, .8);
+        color: rgba($PaletteWhite, 1);
+        top: -.6em;
         &::after {
-          content: "";
-          background: #fff;
-          height: 1px;
-          left: 1.4em;
-          opacity: 0;
-          position: absolute;
-          right: 100%;
-          top: 3.6em;
-          transition: .2s all ease-in-out;
+          opacity: 1;
+          right: 1.4em;
         }
-        
-        &:hover {
-          background-color: rgba($PaletteBlack, .8);
-          color: rgba($PaletteWhite, 1);
-          top: -.6em;
-          &::after {
-            opacity: 1;
-            right: 1.4em;
-          }
-        }
-        &:nth-child(4n+1) {
-          background-position: -10% 77%;
-        }
-        &:nth-child(4n+2) {
-          background-position: 100% 77%;
-        }
-        &:nth-child(4n+3) {
-          background-position: 0% 100%;
-          clear: left;
-        }
-        &:nth-child(4n+4) {
-          background-position: 80% 100%;
-        }
+      }
+      &:nth-child(4n+1) {
+        background-position: -10% 77%;
+      }
+      &:nth-child(4n+2) {
+        background-position: 100% 77%;
+      }
+      &:nth-child(4n+3) {
+        background-position: 0% 100%;
+      }
+      &:nth-child(4n+4) {
+        background-position: 80% 100%;
+      }
+      &:nth-child(2n+1) {
+        clear: left;
       }
     }
   }
 }
+
 @keyframes rotate {
   0% {transform: rotate(45deg);}
   100% {transform: rotate(0deg);}

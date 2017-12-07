@@ -1,8 +1,13 @@
-@import '../../node_modules/css-reset-and-normalize-sass/scss/reset-and-normalize';
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables';
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins';
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/normalize';
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/glyphicons';
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/buttons';
 @import 'https://fonts.googleapis.com/css?family=Roboto';
 
 body {
-  background: #fff;
+  background: $PaletteDarkest url('../img/header.jpg') no-repeat center center;
+  background-size: cover;
   font-family: 'Roboto', 'Helvetica', Arial, sans-serif;
   font-size: 11px;
   
@@ -11,10 +16,19 @@ body {
     box-sizing: border-box;
   }
 
+  main {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 300px;
+  }
+
   container {
     display: block;
+    margin: 0 auto;
+    max-width: 1000px;
     position: relative;
-  }
+  }  
 }
 
 section {
@@ -25,10 +39,6 @@ section {
   &.notch {
     @include notch();
   }
-}
-
-h2.logo {
-
 }
 
 .desc {

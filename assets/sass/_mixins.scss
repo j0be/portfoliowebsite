@@ -21,3 +21,59 @@
     width: 100px;
   }
 }
+
+@mixin row($margin: -15px) {
+  margin-left: $margin;
+  margin-right: $margin;
+  &::before,
+  &::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
+@mixin col($size: md, $cols: 12, $dir: false) {
+  @if $dir==pull {
+    right: $cols / 12 * 100%;
+  }
+  @else if $dir==push {
+    left: $cols / 12 * 100%;
+  }
+  @else {
+    @if $size==xs {
+      width: $cols / 12 * 100%;
+    }
+    @else if $size==sm {
+      @media (min-width: 768px) {
+        width: $cols / 12 * 100%;
+      }
+    }
+    @else if $size==md {
+      @media (min-width: 992px) {
+        width: $cols / 12 * 100%;
+      }
+    }
+    @else if $size==lg {
+      @media (min-width: 1200px) {
+        width: $cols / 12 * 100%;
+      }
+    }
+    float: left;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+  }
+}
+
+@mixin clearfix() {
+  &::before,
+  &::after {
+    content: "";
+    display: table;
+  }
+  &::after {
+    clear: both;
+  }
+}

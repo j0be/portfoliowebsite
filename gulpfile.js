@@ -1,4 +1,5 @@
 var _ = require('lodash');
+var clean = require('gulp-clean');
 var cssmin = require('gulp-cssmin');
 var filter = require('gulp-filter');
 var gulp = require('gulp');
@@ -7,6 +8,7 @@ var iconfont = require('gulp-iconfont');
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
+var spritesmith = require('gulp.spritesmith');
 
 var argv = require('yargs')
   .default('nowatch', false)
@@ -55,11 +57,33 @@ function _buildStyleBundle() {
       .pipe(gulp.dest('./assets/css'));
   }
 
-  gulp.watch(sourceDir, build);
+  if (WATCH) {
+    gulp.watch(sourceDir, build);
+  }
 
   return build();
 }
 
+gulp.task('sprites', function () {
+  var sourceDir = './assets/icons/*.png';
+  function build () {
+    gulp.src('./assets/css/_sprite.*', {
+        read: false
+      })
+      .pipe(clean());
+
+    var spriteData = gulp.src('./assets/icons/*.png').pipe(spritesmith({
+      imgName: '_sprite.png',
+      cssName: '_sprite.scss'
+    }));
+    return spriteData.pipe(gulp.dest('./assets/css/'));
+  }
+  if (WATCH) {
+    gulp.watch(sourceDir, build);
+  }
+  return build();
+});
+
 gulp.task('js', _buildJSBundle);
-gulp.task('sass', _buildStyleBundle);
+gulp.task('sass', ['sprites'], _buildStyleBundle);
 gulp.task('default', ['js', 'sass']);

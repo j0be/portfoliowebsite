@@ -4,7 +4,7 @@
 
     <div class="logoblock">
       <a class="block" href="#about">About</a>
-      <a class="block" href="#services">Services</a>
+      <a class="block" href="#social">Social</a>
       <a class="block" href="#portfolio">Portfolio</a>
       <a class="block" href="#contact">Contact</a>
     </div>

@@ -7,15 +7,14 @@
     <link href="assets/css/styles.css" rel="stylesheet" />
 </head>
 <body>
-
-<container>
+<main>
   <?php
     include_once "./views/header.php";
     include_once "./views/about.php";
-    include_once "./views/services.php";
+    include_once "./views/social.php";
     include_once "./views/portfolio.php";
     include_once "./views/contact.php";
   ?>
-</container>
+</main>
 </body>
 </html>
