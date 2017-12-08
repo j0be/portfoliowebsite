@@ -12,7 +12,7 @@
         <div class="box">
             <h3><span class="glyphicon glyphicon-search"></span>A little more about me</h3>
             <div class="desc">
-                My services as a graphic designer and web developer are specialized in these fields:
+                My services are specialized in these fields:
                 <ul>
                     <li>web design</li>
                     <li>web development</li>

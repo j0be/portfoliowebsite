@@ -1,9 +1,10 @@
 $PaletteWhite: #fff;
 $PaletteBlack: #000;
 
-$PaletteMid: #263444;
-$PaletteDark: #111A1A;
 $PaletteDarkest: #030412;
+$PaletteDark: #111A1A;
+$PaletteMid: #263444;
+$PaletteLight: hsl(hue($PaletteMid), 100%, 80%);
 
 $PaletteAccent: #e5d9ac;
 $PaletteAccentLightest: #eee;

@@ -1,0 +1,145 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$codepen-name: 'codepen';
+$codepen-x: 0px;
+$codepen-y: 0px;
+$codepen-offset-x: 0px;
+$codepen-offset-y: 0px;
+$codepen-width: 46px;
+$codepen-height: 46px;
+$codepen-total-width: 138px;
+$codepen-total-height: 92px;
+$codepen-image: '_sprite.png';
+$codepen: (0px, 0px, 0px, 0px, 46px, 46px, 138px, 92px, '_sprite.png', 'codepen', );
+$dribbble-name: 'dribbble';
+$dribbble-x: 46px;
+$dribbble-y: 0px;
+$dribbble-offset-x: -46px;
+$dribbble-offset-y: 0px;
+$dribbble-width: 46px;
+$dribbble-height: 46px;
+$dribbble-total-width: 138px;
+$dribbble-total-height: 92px;
+$dribbble-image: '_sprite.png';
+$dribbble: (46px, 0px, -46px, 0px, 46px, 46px, 138px, 92px, '_sprite.png', 'dribbble', );
+$github-name: 'github';
+$github-x: 0px;
+$github-y: 46px;
+$github-offset-x: 0px;
+$github-offset-y: -46px;
+$github-width: 46px;
+$github-height: 46px;
+$github-total-width: 138px;
+$github-total-height: 92px;
+$github-image: '_sprite.png';
+$github: (0px, 46px, 0px, -46px, 46px, 46px, 138px, 92px, '_sprite.png', 'github', );
+$imgur-name: 'imgur';
+$imgur-x: 46px;
+$imgur-y: 46px;
+$imgur-offset-x: -46px;
+$imgur-offset-y: -46px;
+$imgur-width: 46px;
+$imgur-height: 46px;
+$imgur-total-width: 138px;
+$imgur-total-height: 92px;
+$imgur-image: '_sprite.png';
+$imgur: (46px, 46px, -46px, -46px, 46px, 46px, 138px, 92px, '_sprite.png', 'imgur', );
+$linkedin-name: 'linkedin';
+$linkedin-x: 92px;
+$linkedin-y: 0px;
+$linkedin-offset-x: -92px;
+$linkedin-offset-y: 0px;
+$linkedin-width: 46px;
+$linkedin-height: 46px;
+$linkedin-total-width: 138px;
+$linkedin-total-height: 92px;
+$linkedin-image: '_sprite.png';
+$linkedin: (92px, 0px, -92px, 0px, 46px, 46px, 138px, 92px, '_sprite.png', 'linkedin', );
+$reddit-name: 'reddit';
+$reddit-x: 92px;
+$reddit-y: 46px;
+$reddit-offset-x: -92px;
+$reddit-offset-y: -46px;
+$reddit-width: 46px;
+$reddit-height: 46px;
+$reddit-total-width: 138px;
+$reddit-total-height: 92px;
+$reddit-image: '_sprite.png';
+$reddit: (92px, 46px, -92px, -46px, 46px, 46px, 138px, 92px, '_sprite.png', 'reddit', );
+$spritesheet-width: 138px;
+$spritesheet-height: 92px;
+$spritesheet-image: '_sprite.png';
+$spritesheet-sprites: ($codepen, $dribbble, $github, $imgur, $linkedin, $reddit, );
+$spritesheet: (138px, 92px, '_sprite.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

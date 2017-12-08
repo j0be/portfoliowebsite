@@ -1,15 +1,26 @@
 <section name="social" class="social notch">
     <container>
-        <span class="socialitem"><a class="github" href="http://github.com/j0be/" target="_blank" rel="noopener">Github</a></span>
-        <span class="socialitem"><a class="codepen" href="https://codepen.io/j0be/" target="_blank" rel="noopener">Codepen</a></span>
-        <span class="socialitem"><a class="linkedin" href="https://www.linkedin.com/in/ron-troyer-b3642622/" target="_blank" rel="noopener">LinkedIn</a></span>
+        <h3>Find me around the web</h3>
         <span class="socialitem">
-            <span class="inactive dribbble" target="_blank" rel="noopener">
-                Dribble
-                <span class="hover">If you have an extra invite laying around, you'd be my favorite if you could invite me</span>
+            <a href="http://github.com/j0be/" target="_blank" rel="noopener"><span class="github">Github</span></a>
+        </span>
+        <span class="socialitem">
+            <a href="https://codepen.io/j0be/" target="_blank" rel="noopener"><span class="codepen">Codepen</span></a>
+        </span>
+        <span class="socialitem">
+            <a href="https://www.linkedin.com/in/ron-troyer-b3642622/" target="_blank" rel="noopener"><span class="linkedin">LinkedIn</span></a>
+        </span>
+        <span class="socialitem">
+            <span class="inactive">
+                <span class="dribbble">Dribble</span>
+                <span class="hover">If you have an extra Dribble invite laying around, you'd be my favorite if you could invite me</span>
             </span>
         </span>
-        <span class="socialitem"><a class="reddit" href="https://www.reddit.com/user/j0be" target="_blank" rel="noopener">Reddit</a></span>
-        <span class="socialitem"><a class="imgur" href="https://imgur.com/user/j0be" target="_blank" rel="noopener">Imgur</a></span>
+        <span class="socialitem">
+            <a href="https://www.reddit.com/user/j0be" target="_blank" rel="noopener"><span class="reddit">Reddit</span></a>
+        </span>
+        <span class="socialitem">
+            <a href="https://imgur.com/user/j0be/submitted/best" target="_blank" rel="noopener"><span class="imgur">Imgur</span></a>
+        </span>
     </container>
 </section>
