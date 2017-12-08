@@ -1311,9 +1311,7 @@ body {
   body main {
     height: 100vh;
     overflow-x: hidden;
-    overflow-y: auto;
-    -webkit-perspective: 300px;
-            perspective: 300px; }
+    overflow-y: auto; }
   body container {
     display: block;
     margin: 0 auto;
@@ -1418,13 +1416,48 @@ a {
     -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); }
 
+#scroller {
+  background: url("../img/shad-down.png") no-repeat top center;
+  color: #fff;
+  display: inline-block;
+  height: 50px;
+  left: 50%;
+  line-height: 25px;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  -webkit-transition: .3s opacity ease-in-out;
+  transition: .3s opacity ease-in-out;
+  width: 100px;
+  z-index: 10; }
+  #scroller.hidden {
+    opacity: 0;
+    pointer-events: none; }
+  #scroller::before, #scroller::after {
+    border: 35px solid #111A1A;
+    border-bottom-width: 0;
+    border-color: #111A1A transparent transparent transparent;
+    content: "";
+    left: 50%;
+    position: absolute;
+    top: 0;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    z-index: -1; }
+  #scroller::after {
+    border: 45px solid #fff;
+    border-bottom-width: 0;
+    border-color: #fff transparent transparent transparent;
+    opacity: .8;
+    z-index: -2; }
+
 section.header {
   background: transparent;
   height: 700px;
   padding: 0;
-  position: relative;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d; }
+  position: relative; }
   section.header::before, section.header::after {
     bottom: 0;
     left: 0;
@@ -1435,17 +1468,13 @@ section.header {
     z-index: 0; }
   section.header::before {
     background: url("../img/header-1.png") no-repeat top left;
-    background-size: auto 90%;
-    -webkit-transform: translateZ(-1200px) scale(6) translate(7vw, -9%);
-            transform: translateZ(-1200px) scale(6) translate(7vw, -9%); }
+    background-size: auto 90%; }
     @media (max-width: 720px) {
       section.header::before {
-        margin-left: -80vw; } }
+        margin-left: -40vw; } }
   section.header::after {
     background: url("../img/header-2.png") no-repeat bottom right;
-    background-size: auto 80%;
-    -webkit-transform: translateZ(-300px) scale(2) translate(7vw, -9%);
-            transform: translateZ(-300px) scale(2) translate(7vw, -9%); }
+    background-size: auto 80%; }
   section.header container {
     text-align: center;
     z-index: 1; }
@@ -1614,14 +1643,28 @@ section.social {
   @media (min-width: 768px) {
     section.social {
       padding: 100px 0; } }
+  section.social > container {
+    max-width: 80vw; }
   section.social .socialitem {
+    width: 33.33333%;
+    float: left;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    float: left;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
     display: inline-block;
     padding: 20px; }
-    @media (max-width: 767px) {
+    @media (min-width: 768px) {
       section.social .socialitem {
-        clear: left;
-        float: left;
-        width: 100%; } }
+        width: 16.66667%; } }
+    section.social .socialitem button {
+      background: transparent;
+      border: none; }
     section.social .socialitem a,
     section.social .socialitem .inactive {
       position: relative; }
@@ -1670,19 +1713,22 @@ section.social {
           -webkit-transform: rotate(45deg);
                   transform: rotate(45deg);
           width: 1em; }
-      section.social .socialitem a:hover span,
+      section.social .socialitem a:focus span, section.social .socialitem a:hover span,
+      section.social .socialitem .inactive:focus span,
       section.social .socialitem .inactive:hover span {
         -webkit-filter: none;
                 filter: none;
         opacity: 1; }
-      section.social .socialitem a:hover .hover,
+      section.social .socialitem a:focus .hover, section.social .socialitem a:hover .hover,
+      section.social .socialitem .inactive:focus .hover,
       section.social .socialitem .inactive:hover .hover {
         opacity: 1;
         -webkit-transform: translate(-50%, -80%);
                 transform: translate(-50%, -80%); }
 
 section.portfolio {
-  background: #09f; }
+  background: #263444;
+  min-height: 640px; }
 
 section.contact {
   background-color: #eee;

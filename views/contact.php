@@ -1,4 +1,4 @@
-<section name="contact" class="contact notch">
+<section name="contact" id="contact" class="contact notch">
   <container>
       <div class="contactcontent">
           <div class="left-about contactsection cell">

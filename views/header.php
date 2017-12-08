@@ -1,4 +1,4 @@
-<section class="header">
+<section class="header" id="header">
   <container>
     <h1><a href="http://ronaldtroyer.com">Ronald Troyer</a></h1>
 

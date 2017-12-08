@@ -1,4 +1,4 @@
-<section name="about" class="about notch">
+<section name="about" id="about" class="about notch">
     <container>
        <div class="box">
             <h2 class="logo"><span>About</span> <strong>Ronald</strong> Troyer</h2>

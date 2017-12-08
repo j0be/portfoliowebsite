@@ -18,14 +18,19 @@ section.social {
     padding: 100px 0;
   }
 
+  > container {
+    max-width: 80vw;
+  }
+
   .socialitem {
+    @include col('xs', 4);
+    @include col('sm', 2);
     display: inline-block;
     padding: 20px;
 
-    @media (max-width: 767px) {
-      clear: left;
-      float: left;
-      width: 100%;
+    button {
+      background: transparent;
+      border: none;
     }
 
     a, 
@@ -73,6 +78,7 @@ section.social {
         }
       }
 
+      &:focus,
       &:hover {
         span {
           filter: none;

@@ -1,9 +1,50 @@
+#scroller {
+  background: url('../img/shad-down.png') no-repeat top center;
+  color: $PaletteWhite;
+  display: inline-block;
+  height: 50px;
+  left: 50%;
+  line-height: 25px;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  transform: translate(-50%,0);
+  transition: .3s opacity ease-in-out;
+  width: 100px;
+  z-index: 10;
+
+  &.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &::before,
+  &::after {
+    border: 35px solid $PaletteDark;
+    border-bottom-width: 0;
+    border-color: $PaletteDark transparent transparent transparent;
+    content: "";
+    left: 50%;
+    position: absolute;
+    top: 0;
+    transform: translate(-50%, 0);
+    z-index: -1;
+  }
+
+  &::after {
+    border: 45px solid $PaletteWhite;
+    border-bottom-width: 0;
+    border-color: $PaletteWhite transparent transparent transparent;
+    opacity: .8;
+    z-index: -2;
+  }
+}
+
 section.header {
   background: transparent;
   height: 700px;
   padding: 0;
   position: relative;
-  transform-style: preserve-3d;
   
   &::before,
   &::after {
@@ -15,15 +56,13 @@ section.header {
   &::before {
     background: url('../img/header-1.png') no-repeat top left;
     background-size: auto 90%;
-    transform: translateZ(-1200px) scale(6) translate(7vw, -9%);
     @media (max-width: 720px) {
-      margin-left: -80vw;
+      margin-left: -40vw;
     }
   }
   &::after {
     background: url('../img/header-2.png') no-repeat bottom right;
     background-size: auto 80%;
-    transform: translateZ(-300px) scale(2) translate(7vw, -9%);
   }
   container {
     text-align: center;
