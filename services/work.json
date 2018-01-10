@@ -1,36 +1,138 @@
 {
-    "experience": [
-        {
-            "subcategory":"",
-            "title":"AC Lens",
-            "subtitle":"",
-            "link":"",
-            "date":"",
-            "markup":""
+    "experience": [{
+            "title": "AC Lens",
+            "subtitle": "Senior Full Stack Web Developer",
+            "link": "http://aclenscorp.com",
+            "date": "2015 - Present",
+            "additionalLinks": {
+                "description": "",
+                "links": [
+                    ["Discount Contact Lenses", "http://discountcontactlenses.com"],
+                    ["Discount Glasses", "http://discountglasses.com"],
+                    ["ACLens", "http://aclens.com"],
+                    ["Military Contact Lenses", "http://militarycontactlenses.com"],
+                    ["Walmart Contacts", "http://walmartcontacts.com"],
+                    ["Sam's Club Contacts", "http://aclens.com"],
+                    ["CVS Optical", "http://optical.cvs.com"],
+                    ["America's Best", "http://americasbest.com"],
+                    ["Eyeglass World", "http://eyeglassworld.com"],
+                    ["Military Optical", "http://militaryoptical.com"]
+                ]
+            }
         },
         {
-            "subcategory":"",
-            "title":"OCCRRA",
-            "subtitle":"",
-            "link":"",
-            "date":"",
-            "markup":""
+            "title": "OCCRRA",
+            "subtitle": "Full Stack Web Developer",
+            "link": "https://occrra.org/",
+            "date": "2014 - 2015"
         },
         {
-            "subcategory":"",
-            "title":"EXPRESS",
-            "subtitle":"",
-            "link":"",
-            "date":"",
-            "markup":""
+            "title": "EXPRESS",
+            "subtitle": "Front End Web Developer",
+            "link": "https://www.express.com/",
+            "date": "2012 - 2014"
         },
         {
-            "subcategory":"",
-            "title":"John Paradiso and Associates",
-            "subtitle":"",
-            "link":"",
-            "date":"",
-            "markup":""
+            "subcategory": "Junior Web Designer / Technical Support",
+            "title": "John Paradiso and Associates",
+            "date": "2008 - 2012"
+        }
+    ],
+    "education": [{
+        "title": "Art Institute of Pittsburgh",
+        "subtitle": "Bachelor of Science Degree in Graphic Design",
+        "date": "Graduated 2008"
+    }],
+    "projects": [
+        {
+            "subcategory": "CSS Artwork",
+            "title": "Barbarian",
+            "link": "https://codepen.io/j0be/pen/BJyxZm",
+            "date": "January 2018"
+        },
+        {
+            "subcategory": "CSS Artwork",
+            "title": "Let's taco bout it",
+            "link": "https://codepen.io/j0be/pen/ZvpOmz",
+            "date": "December 2017"
+        },
+        {
+            "subcategory": "CSS Artwork",
+            "title": "Toilet Paper",
+            "link": "https://codepen.io/j0be/pen/zpYaLP",
+            "date": "December 2017"
+        },
+        {
+            "subcategory": "Javascript Application",
+            "title": "Tic Tac Toe Dimensions",
+            "link": "https://codepen.io/j0be/pen/dVJeYq/",
+            "date": "October 2017"
+        },
+        {
+            "subcategory": "Javascript Application",
+            "title": "Power Delete Suite",
+            "link": "https://github.com/j0be/PowerDeleteSuite",
+            "date": "January 2017"
+        },
+        {
+            "subcategory": "CSS Artwork",
+            "title": "Happy Fourth of July!",
+            "link": "https://codepen.io/j0be/pen/owqNNe/",
+            "date": "June 2017"
+        },
+        {
+            "subcategory": "Javascript",
+            "title": "12 Days of Christmas",
+            "link": "https://codepen.io/j0be/pen/owXKGE/",
+            "date": "June 2017"
+        },
+        {
+            "subcategory": "CSS Artwork",
+            "title": "Christmas Tree",
+            "link": "https://codepen.io/j0be/pen/vyMjWm/",
+            "date": "December 2016"
+        },
+        {
+            "subcategory": "CSS Artwork",
+            "title": "Phone Evolution",
+            "link": "https://codepen.io/j0be/pen/wWMQpG/",
+            "date": "June 2016"
+        },
+        {
+            "subcategory": "CSS Artwork",
+            "title": "Now you're thinking with portals",
+            "link": "https://codepen.io/j0be/pen/jWpMVO",
+            "date": "February 2016"
+        },
+        {
+            "subcategory": "CSS Artwork",
+            "title": "BB-8 in entirely html and css",
+            "link": "https://codepen.io/j0be/pen/eJeKxv",
+            "date": "January 2016"
+        },
+        {
+            "subcategory": "Javascript",
+            "title": "Text Clock",
+            "link": "https://codepen.io/j0be/pen/RrjoBE",
+            "date": "January 2016"
+        },
+        {
+            "subcategory": "CSS Artwork",
+            "title": "Hamburger Menu",
+            "link": "https://codepen.io/j0be/pen/jWLNoa",
+            "date": "January 2016"
+        },
+        {
+            "subcategory": "Javascript / CSS",
+            "title": "LCD Clock",
+            "link": "https://codepen.io/j0be/pen/yePbyL",
+            "date": "January 2016"
+        },
+        {
+            "subcategory": "Javascript / CSS",
+            "title": "Typing Clock",
+            "link": "https://codepen.io/j0be/pen/pgpQog",
+            "date": "January 2016"
         }
     ]
 }
