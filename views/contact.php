@@ -1,24 +1,16 @@
-<section name="contact" id="contact" class="contact notch">
-  <container>
-      <div class="contactcontent">
-          <div class="left-about contactsection cell">
-              <div class="label">Contact</div>
-              <h2 class="logo"><strong>Ronald</strong> Troyer</h2>
-              <div>
-                  Current location: Columbus, OH
-              </div>
-              <div id="phonenum">
-                  Phone: <a href="tel:6149069069">(614) 906-9069</a>
-              </div>
-          </div>
-
-          <form id="contactform" class="right-about contactsection cell" action="./email.php" method="post">
-              <input type="text" name="name" id="name" value="" placeholder="Name *" pattern="^[A-Za-z\s\.-]{2,}$" title="Name must be at least two characters long">
-              <input type="email" name="email" id="email" value="" placeholder="Email *" pattern="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$"  title="Please enter a valid email address">
-              <textarea placeholder="Message *" name="message" id="message" pattern="^.{1,}$"></textarea>
-              <input type="submit" value="Submit" class="clearbutt">
-          </form>
-          <div class="right-about status"></div>
-      </div>
-  </container>
+<section class="contact" name="contact" id="contact">
+    <h2 class="hidden">Contact</h2>
+    <div class="cta">
+        Need to get ahold of me?
+        <a href="mailto:ron.troyer@gmail.com" target="_blank" rel="nofollow">Shoot me an email</a>
+    </div>
+    
+    <div class="social">
+        <a href="https://github.com/j0be" target="_blank" rel="nofollow">Github</a>
+        <a href="https://codepen.io/j0be" target="_blank" rel="nofollow">Codepen</a>
+        <a href="https://www.linkedin.com/in/ron-troyer/" target="_blank" rel="nofollow">LinkedIn</a>
+        <a href="https://reddit.com/user/j0be" target="_blank" rel="nofollow">Reddit</a>
+        <a href="https://imgur.com/user/j0be/submitted/best" target="_blank" rel="nofollow">Imgur</a>
+        <a href="mailto:ron.troyer@gmail.com" target="_blank" rel="nofollow">Email</a>
+    </div>
 </section>

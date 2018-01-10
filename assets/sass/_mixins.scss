@@ -1,36 +1,6 @@
-@mixin fullsize() {
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-}
-
 @mixin notch() {
   clip-path: polygon(0 0, calc(50% - 35px) 0%, 50% 35px, calc(50% + 35px) 0%, 100% 0, 100% 100%, 0 100%);
   margin-top: -35px;
-
-  &::before {
-    background: url('../img/shad-down.png') no-repeat top center;
-    content: "";
-    display: block;
-    height: 50px;
-    left: 50%;
-    margin-left: -50px;
-    position: absolute;
-    top: 0;
-    width: 100px;
-  }
-}
-
-@mixin row($margin: -15px) {
-  margin-left: $margin;
-  margin-right: $margin;
-  &::before,
-  &::after {
-    clear: both;
-    content: "";
-    display: block;
-  }
 }
 
 @mixin col($size: md, $cols: 12, $dir: false) {
@@ -61,8 +31,6 @@
     }
     float: left;
     min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
     position: relative;
   }
 }

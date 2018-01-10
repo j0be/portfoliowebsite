@@ -3,13 +3,18 @@
 @import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/normalize';
 @import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/glyphicons';
 @import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/buttons';
-@import 'https://fonts.googleapis.com/css?family=Roboto';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+@import 'https://fonts.googleapis.com/css?family=Roboto:100,300,400';
 
 body {
-  background: $PaletteDarkest url('../img/header.jpg') no-repeat center center;
-  background-size: cover;
+  background: #fff;
+  color: $PaletteDarkest;
   font-family: 'Roboto', 'Helvetica', Arial, sans-serif;
-  font-size: 11px;
+  font-size: 14px;
+  font-weight: 400;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100vw;
   
   &, 
   & * {
@@ -17,106 +22,42 @@ body {
   }
 
   main {
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
+    min-height: 100vh;
   }
-
-  container {
-    @include clearfix;
-    display: block;
-    margin: 0 auto;
-    max-width: 1000px;
-    position: relative;
-  }  
 }
 
 section {
-  background: #fff;
-  display: block;
-  padding: 100px 20px;
+  clear: left;
+  padding: 50px;
   position: relative;
-  &.notch {
-    @include notch();
-  }
-}
-
-.desc {
-  color: #666;
-  font-size: 1.2em;
-  line-height: 1.5em;
-}
-
-h2.logo {
-  display: inline-block;
-  font-family: 'Helvetica', Arial, sans-serif;
-  font-size: 1.5em;
-  font-weight: normal;
-  letter-spacing: .2em;
-  margin-top: 0;
-  position: relative;
-  text-transform: uppercase;
-  &::before {
-    content: "\25A0\25A0\25A0\25A0";
-    display: inline-block;
-    font-size: 11px;
-    height: 1.5em;
-    left: -2.8em;
-    letter-spacing: 0em;
-    line-height: 0.65em;
-    position: absolute;
-    text-align: center;
-    top: 0.9em;
-    transform: rotate(45deg);
-    width: 1.5em;
-    word-wrap: break-word;
-  }
-  span {
-    display: none;
-  }
-  strong {
-    display: block;
-  }
-}
-
-h3 {
-  position: relative;
-  .glyphicon {
-    color: #fff;
-    font-size: 1.2em;
-    padding: .5em;
-    position: absolute;
-    background: $PaletteMid;
-    border: .3em solid $PaletteAccent;
-    border-radius: 100%;
-    transform: translate(-120%, -30%);
-    @media (max-width: 767px) {
-      font-size: 12px;
-    }
-  }
 }
 
 a {
-  color: $PaletteMid;
+  color: $PaletteMidLight;
+  display: inline-block;
   text-decoration: none;
+
+  &:hover {
+    color: mix($PaletteMid,$PaletteMidLight);
+  }
 }
 
-.clearbutt {
-  background: transparent;
-  border: none;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, .3);
-  color: #000;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 12px;
-  padding: 8px 16px;
-  text-decoration: none;
-  img {
-    vertical-align: middle;
-    margin-right: .5em;
+body main .cta {
+  font-family: 'Roboto', 'Helvetica', Arial, sans-serif;
+  font-size: 48px;
+  font-weight: 100;
+  margin: .5em 0 1.5em;
+  @media(max-width: 767px) {
+      font-size: 7vw;
   }
-  &:hover {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
-  }
+}
+
+.hidden {
+  height: 1px;
+  left: -9000vw;
+  opacity: 0;
+  overflow: hidden;
+  position: fixed;
+  top: -9000vh;
+  width: 1px;
 }

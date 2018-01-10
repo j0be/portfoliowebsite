@@ -1,0 +1,157 @@
+section.intro {
+    min-height: 90vh;
+    padding: 0;
+
+    header,
+    .summary,
+    .experience {
+        clear: left;
+        float: left;
+        padding: 0 5vw;
+        position: relative;
+        width: 100vw;
+    }
+
+    h1 {
+        @include clearfix;
+        display: inline-block;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+
+        a {
+            height: 100px;
+            position: relative;
+            text-indent: -9000%;
+            transform: rotate(45deg) scale(.7);
+            top: 50%;
+            width: 100px;
+
+            svg {
+                left: -50px;
+                position: absolute;
+                top: -50px;
+
+                rect {
+                    animation: bounce 5s 1;
+                    animation-fill-mode: forwards;
+                    fill: $PaletteMid;
+
+                    @for $i from 1 through 4 {
+                        &:nth-child(#{$i}) {
+                            animation-delay: #{($i/8)}s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    nav {
+        position: absolute;
+        right: 10vw;
+        top: 50%;
+        transform: translate(0,-50%);
+
+        a {
+            font-size: 18px;
+            margin-left: 3em;
+        }
+    }
+
+    .summary {
+        @include col(xs,12);
+        @include col(lg,9);
+        font-family: 'Roboto', 'Helvetica', Arial, sans-serif;
+        font-size: 48px;
+        font-weight: 100;
+
+        @media (max-width: 640px) {
+            font-size: 7vw;
+        }
+    }
+
+    .experience {
+        @include clearfix;
+        margin: 0 5vw;
+        padding: 0;
+        width: 90vw;
+
+        .item {
+            @include col(xs,12);
+            @include col(sm,4);
+            padding: 40px 0;
+            text-align: center;
+
+            @media (min-width: 768px) {
+                bottom: 0;
+                padding: 50px 0;
+                position: absolute;
+
+                @for $i from 0 through 2 {
+                    &:nth-child(#{$i+1}) {
+                        left: #{$i*33.33}#{'%'};
+                    }
+                }
+            }
+
+            span {
+                display: block;
+                letter-spacing: .15em;
+                text-transform: uppercase;
+            }
+            a {
+                background-position: left center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                display: block;
+                filter: grayscale(100%);
+                height: 25px;
+                margin: 1em auto 0;
+                opacity: .8;
+                text-indent: -9000%;
+                transition: .3s all ease-in-out;
+
+                &:hover {
+                    filter: grayscale(0%);
+                    opacity: 1;
+                }
+
+                &.aclens {
+                    background-image: url('../img/acl.svg');
+                    height: 37px;
+                    width: 108px;
+                }
+
+                &.occrra {
+                    background-image: url('../img/occrra.png');
+                    height: 37px;
+                    width: 90px;
+                }
+
+                &.express {
+                    background-image: url('../img/express.svg');
+                    background-size: 144px;
+                    width: 144px;
+                }
+            }
+        }
+    }
+
+    header {
+        min-height: 27vh;
+    }
+    .summary {
+        min-height: 46vh;
+    }
+    .experience {
+        min-height: 17vh;
+    }
+}
+
+@keyframes bounce {
+    10% { transform: translate(0,0);}
+    25% { transform: translate(-5%,-5%);}
+    40% { transform: translate(0,0);}
+}

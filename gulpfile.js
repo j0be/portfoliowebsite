@@ -75,25 +75,7 @@ function _buildStyleBundle() {
   return build();
 }
 
-gulp.task('sprites', function () {
-  var sourceDir = './assets/icons/*.png';
-  function build () {
-    gulp.src('./assets/dist/_sprite.*', {
-        read: false
-      })
-      .pipe(clean());
 
-    var spriteData = gulp.src('./assets/icons/*.png').pipe(spritesmith({
-      imgName: '_sprite.png',
-      cssName: '_sprite.scss'
-    }));
-    return spriteData.pipe(gulp.dest('./assets/dist/'));
-  }
-  if (WATCH) {
-    gulp.watch(sourceDir, build);
-  }
-  return build();
-});
 gulp.task('clean', function () {
   return gulp.src('./assets/dist/*', {
     read: false
@@ -101,7 +83,7 @@ gulp.task('clean', function () {
 });
 
 gulp.task('js', _buildJSBundle);
-gulp.task('sass', ['sprites'], _buildStyleBundle);
+gulp.task('sass', _buildStyleBundle);
 gulp.task('default', function () {
   return runSequence('clean', ['js', 'sass']);
 });

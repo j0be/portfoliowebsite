@@ -14,13 +14,10 @@
     <script src="./assets/dist/scripts.js" type="text/javascript"></script>
 </head>
 <body>
-<a id="scroller" class="hidden" href="#header">Home</a>
 <main>
   <?php
-    include_once "./views/header.php";
-    include_once "./views/about.php";
-    include_once "./views/social.php";
-    include_once "./views/portfolio.php";
+    include_once "./views/intro.php";
+    include_once "./views/work.php";
     include_once "./views/contact.php";
   ?>
 </main>

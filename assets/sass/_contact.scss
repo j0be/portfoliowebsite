@@ -1,49 +1,15 @@
 section.contact {
-  background-color: $PaletteAccentLightest;
-  padding: 100px 45px;
+    font-size: 18px;
 
-  a {
-    font-weight: bold;
-  }
+    .social a {
+        margin-right: 3em;
+        margin-bottom: 3em;
 
-  .contactcontent {
-    display: block;
-    margin: 0 auto;
-    max-width: 80vw;
-    width: 400px;
-  }
-
-  .contactsection {
-    @include col('xs', 12);
-    @include col('sm', 6);
-  }
-  .right-about {
-    padding-top: 2em;
-  }
-
-  @media (min-width: 768px) {
-    .left-about {
-      text-align: right;
+        @media (max-width: 479px) {
+            float: left;
+            &:nth-child(2n+1) {
+                clear: left;
+            }
+        }
     }
-    .right-about {
-      border-left: 1px solid rgba(#000, .1);
-      padding-top: 0;
-    }
-  }
-
-  input[type="text"],
-  input[type="email"],
-  textarea {
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, .3);
-    display: block;
-    margin: 0 0 2em;
-    padding: 5px 10px;
-    width: 100%;
-  }
-
-  textarea {
-    min-height: 5em;
-  }
 }
