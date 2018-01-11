@@ -1,48 +1,4 @@
 {
-    "experience": [{
-            "title": "AC Lens",
-            "subtitle": "Senior Full Stack Web Developer",
-            "link": "http://aclenscorp.com",
-            "date": "2015 - Present",
-            "additionalLinks": {
-                "description": "",
-                "links": [
-                    ["Discount Contact Lenses", "http://discountcontactlenses.com"],
-                    ["Discount Glasses", "http://discountglasses.com"],
-                    ["ACLens", "http://aclens.com"],
-                    ["Military Contact Lenses", "http://militarycontactlenses.com"],
-                    ["Walmart Contacts", "http://walmartcontacts.com"],
-                    ["Sam's Club Contacts", "http://aclens.com"],
-                    ["CVS Optical", "http://optical.cvs.com"],
-                    ["America's Best", "http://americasbest.com"],
-                    ["Eyeglass World", "http://eyeglassworld.com"],
-                    ["Military Optical", "http://militaryoptical.com"]
-                ]
-            }
-        },
-        {
-            "title": "OCCRRA",
-            "subtitle": "Full Stack Web Developer",
-            "link": "https://occrra.org/",
-            "date": "2014 - 2015"
-        },
-        {
-            "title": "EXPRESS",
-            "subtitle": "Front End Web Developer",
-            "link": "https://www.express.com/",
-            "date": "2012 - 2014"
-        },
-        {
-            "subcategory": "Junior Web Designer / Technical Support",
-            "title": "John Paradiso and Associates",
-            "date": "2008 - 2012"
-        }
-    ],
-    "education": [{
-        "title": "Art Institute of Pittsburgh",
-        "subtitle": "Bachelor of Science Degree in Graphic Design",
-        "date": "Graduated 2008"
-    }],
     "projects": [
         {
             "subcategory": "CSS Artwork",
@@ -134,5 +90,46 @@
             "link": "https://codepen.io/j0be/pen/pgpQog",
             "date": "January 2016"
         }
-    ]
+    ],
+    "experience": [{
+            "title": "AC Lens",
+            "subtitle": "Senior Full Stack Web Developer",
+            "link": "http://aclenscorp.com",
+            "date": "2015 - Present",
+            "additionalLinks": [
+                ["Discount Contact Lenses", "http://discountcontactlenses.com"],
+                ["Discount Glasses", "http://discountglasses.com"],
+                ["ACLens", "http://aclens.com"],
+                ["Military Contact Lenses", "http://militarycontactlenses.com"],
+                ["Walmart Contacts", "http://walmartcontacts.com"],
+                ["Sam's Club Contacts", "http://aclens.com"],
+                ["CVS Optical", "http://optical.cvs.com"],
+                ["America's Best", "http://americasbest.com"],
+                ["Eyeglass World", "http://eyeglassworld.com"],
+                ["Military Optical", "http://militaryoptical.com"]
+            ]
+        },
+        {
+            "title": "OCCRRA",
+            "subtitle": "Full Stack Web Developer",
+            "link": "https://occrra.org/",
+            "date": "2014 - 2015"
+        },
+        {
+            "title": "EXPRESS",
+            "subtitle": "Front End Web Developer",
+            "link": "https://www.express.com/",
+            "date": "2012 - 2014"
+        },
+        {
+            "subtitle": "Junior Web Designer / Technical Support",
+            "title": "John Paradiso and Associates",
+            "date": "2008 - 2012"
+        }
+    ],
+    "education": [{
+        "title": "Art Institute of Pittsburgh",
+        "subtitle": "Bachelor of Science Degree in Graphic Design",
+        "date": "Graduated 2008"
+    }]
 }

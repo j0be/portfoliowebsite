@@ -4,8 +4,9 @@ $PaletteBlack: #000;
 $PaletteDarkest: #030412;
 $PaletteDark: #111A1A;
 $PaletteMid: #263444;
-$PaletteLight: hsl(hue($PaletteMid), 100%, 80%);
-$PaletteMidLight: mix($PaletteLight,$PaletteMid);
+$PaletteLight: hsl(hue($PaletteMid), 60%, 65%);
+$PaletteMidLight: mix($PaletteLight,$PaletteMid,75%);
+$PaletteLightest: mix($PaletteLight,$PaletteWhite, 25%);
 
 $PaletteAccent: #e5d9ac;
 $PaletteAccentLightest: #eee;

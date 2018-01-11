@@ -1,7 +1,7 @@
 <section class="contact" name="contact" id="contact">
     <h2 class="hidden">Contact</h2>
     <div class="cta">
-        Need to get ahold of me?
+        Need to reach me?
         <a href="mailto:ron.troyer@gmail.com" target="_blank" rel="nofollow">Shoot me an email</a>
     </div>
     

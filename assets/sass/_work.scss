@@ -1,6 +1,10 @@
 section.work {
     background: #f2f2f2;
+    overflow: hidden;
     padding: 15vh 50px;
+    width: 100vw;
+
+    $sections: 3;
 
     .cta {
         font-size: 32px;
@@ -12,20 +16,148 @@ section.work {
     }
 
     .filter {
-        input {
-            display: none;
-        }
-
-        input:checked + label {
-            background-color: $PaletteLight;
-            color: #fff;
-        }
+        @include clearfix;
+        margin-left: -1em;
+        transition: .3s all ease-in-out;
 
         label {
             border-radius: 4px;
             cursor: pointer;
             padding: .5em 1em;
             transition: .3s all ease-in-out;
+        }
+    }
+
+    input {
+        display: none;
+    }
+
+    input:checked:nth-of-type(1) ~ .filter {
+        margin-left: 0;
+    }
+
+    @for $i from 1 through $sections {
+        input:checked:nth-of-type(#{$i}) {
+            ~ .filter label:nth-of-type(#{$i}) {
+                background-color: $PaletteLight;
+                color: #fff;
+            }
+
+            ~ .stage {
+                left: #{($i - 1) * -100}vw;
+            }
+
+            ~ .stage .section:nth-child(#{$i}) {
+                max-height: 500vh;
+            }
+        } 
+    }
+
+    .stage {
+        @include clearfix;
+        margin: 50px -50px;
+        overflow: hidden;
+        position: relative;
+        transition: .3s all ease-in-out;
+        width: #{$sections*100}vw;
+    }
+
+    .section {
+        @include clearfix;
+        float: left;
+        max-height: 1px;
+        margin: 0;
+        transition: .6s all ease-in-out;
+        width: 100vw;
+    }
+    .entry {
+        @include clearfix;
+        border-bottom: 1px solid $PaletteLight;
+        box-shadow: 0 0 5px rgba($PaletteDark,0);
+        color: $PaletteDark;
+        display: block;
+        float: left;
+        margin: 0;
+        padding: 2em 47px;
+        position: relative;
+        top: 0;
+        transition: .3s all ease-in-out;
+        width: 100%;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        > * {
+            float: left;
+            padding: 5px 0;
+
+            @media (max-width: 767px) {
+                clear: left;
+            }
+        }
+        .title {
+            color: $PaletteMidLight;
+            font-size: 24px;
+            font-weight: 300;
+            padding: 0;
+        }
+        .subtitle {
+            clear: left;
+            font-size: 18px;
+            font-weight: 300;
+        }
+
+        .date {
+            + .additional {
+                margin-top: .5em;
+            }
+        }
+
+        .additional {
+            border-left: 1px solid $PaletteLight;
+            clear: left;
+            margin-left: .5em;
+            padding-left: 1em;
+        }
+
+        @media (min-width: 768px) {
+            .title {
+                width: 50%;
+            }
+            .subtitle {
+                width: 50%;
+                + .date {
+                    margin-left: 25%;
+                }
+            }
+            .subcategory {
+                text-align: center;
+                width: 25%;
+            }
+            .date {
+                text-align: right;
+                width: 25%;
+            }
+        }
+    }
+
+    a.entry {
+        &:hover {
+            background: $PaletteLight;
+            box-shadow: 0 0 5px rgba($PaletteDark,.2);
+            color: $PaletteLightest;
+            top: -3px;
+
+            .title {
+                color: $PaletteWhite;
+            }
+        }
+    }
+
+    div.entry {
+        span.title {
+            color: $PaletteDark;
         }
     }
 }

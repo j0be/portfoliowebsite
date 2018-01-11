@@ -11,7 +11,7 @@
     </header>
     <div class="summary">
         I'm Ronald Troyer, a <a href="http://github.com/j0be" target="_blank" rel="nofollow">web developer</a>
-        and <a href="http://codepen.io/j0be" target="_blank" rel="nofollow">web designer</a> living in Columbus
+        and <a href="http://codepen.io/j0be" target="_blank" rel="nofollow">web designer</a> living in Columbus, Ohio
         currently working for AC Lens.
     </div>
     <div class="experience">
@@ -21,7 +21,7 @@
         </div>
         <div class="item">
             <span>Previously:</span>
-            <a href="http://occrra.com" target="_blank" rel="nofollow" class="occrra" data-target="#occrra">OCCRRA</a>
+            <a href="http://occrra.org" target="_blank" rel="nofollow" class="occrra" data-target="#occrra">OCCRRA</a>
         </div>
         <div class="item">
             <span>Before that:</span>

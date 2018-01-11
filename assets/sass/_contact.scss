@@ -1,14 +1,20 @@
 section.contact {
     font-size: 18px;
 
-    .social a {
-        margin-right: 3em;
-        margin-bottom: 3em;
+    .social {
+        @include clearfix;
+        a {
+            margin-right: 3em;
+            margin-bottom: 3em;
 
-        @media (max-width: 479px) {
-            float: left;
-            &:nth-child(2n+1) {
-                clear: left;
+            @media (max-width: 479px) {
+                float: left;
+                margin-right: 0;
+                padding-right: 3em;
+                width: 50%;
+                &:nth-child(2n+1) {
+                    clear: left;
+                }
             }
         }
     }
