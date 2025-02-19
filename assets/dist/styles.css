@@ -1480,18 +1480,18 @@ section.intro {
           -webkit-filter: grayscale(0%);
                   filter: grayscale(0%);
           opacity: 1; }
-        section.intro .experience .item a.aclens {
-          background-image: url("../img/acl.svg");
-          height: 37px;
-          width: 108px; }
         section.intro .experience .item a.chase {
           background-image: url("../img/chase.png");
           background-size: 144px;
           width: 144px; }
+        section.intro .experience .item a.aclens {
+          background-image: url("../img/acl.svg");
+          height: 37px;
+          width: 108px; }
         section.intro .experience .item a.occrra {
           background-image: url("../img/occrra.png");
-          background-size: 144px;
-          width: 144px; }
+          height: 37px;
+          width: 90px; }
         section.intro .experience .item a.express {
           background-image: url("../img/express.svg");
           background-size: 144px;
