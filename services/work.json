@@ -91,45 +91,42 @@
             "date": "January 2016"
         }
     ],
-    "experience": [{
-            "title": "AC Lens",
-            "subtitle": "Senior Full Stack Web Developer",
-            "link": "http://aclenscorp.com",
-            "date": "2015 - Present",
-            "additionalLinks": [
-                ["Discount Contact Lenses", "http://discountcontactlenses.com"],
-                ["Discount Glasses", "http://discountglasses.com"],
-                ["ACLens", "http://aclens.com"],
-                ["Military Contact Lenses", "http://militarycontactlenses.com"],
-                ["Walmart Contacts", "http://walmartcontacts.com"],
-                ["Sam's Club Contacts", "http://aclens.com"],
-                ["CVS Optical", "http://optical.cvs.com"],
-                ["America's Best", "http://americasbest.com"],
-                ["Eyeglass World", "http://eyeglassworld.com"],
-                ["Military Optical", "http://militaryoptical.com"]
-            ]
+    "experience": [
+        {
+            "title": "JP Morgan Chase",
+            "subtitle": "Vice President Senior Lead Software Engineer",
+            "link": "https://chase.com",
+            "date": "2018 - 2025"
         },
         {
-            "title": "OCCRRA",
+            "title": "AC Lens",
+            "subtitle": "Senior Full Stack Web Developer",
+            "link": "https://aclenscorp.com",
+            "date": "2015 - 2018"
+        },
+        {
+            "title": "Ohio Child Care Resource & Referral Association",
             "subtitle": "Full Stack Web Developer",
             "link": "https://occrra.org/",
             "date": "2014 - 2015"
         },
         {
-            "title": "EXPRESS",
+            "title": "EXPRESS Inc.",
             "subtitle": "Front End Web Developer",
             "link": "https://www.express.com/",
             "date": "2012 - 2014"
         },
         {
-            "subtitle": "Junior Web Designer / Technical Support",
             "title": "John Paradiso and Associates",
+            "subtitle": "Junior Web Designer / Technical Support",
             "date": "2008 - 2012"
         }
     ],
-    "education": [{
-        "title": "Art Institute of Pittsburgh",
-        "subtitle": "Bachelor of Science Degree in Graphic Design",
-        "date": "Graduated 2008"
-    }]
+    "education": [
+        {
+            "title": "Art Institute of Pittsburgh",
+            "subtitle": "Bachelor of Science Degree in Graphic Design",
+            "date": "Graduated 2008"
+        }
+    ]
 }
