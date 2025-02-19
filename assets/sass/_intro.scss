@@ -118,6 +118,12 @@ section.intro {
                     opacity: 1;
                 }
 
+                &.chase {
+                    background-image: url('../img/chase.png');
+                    background-size: 144px;
+                    width: 144px;
+                }
+
                 &.aclens {
                     background-image: url('../img/acl.svg');
                     height: 37px;

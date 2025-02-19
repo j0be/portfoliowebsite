@@ -15,7 +15,7 @@
     <div class="experience">
         <div class="item">
             <span>Recently:</span>
-            <a href="https://chase.com" target="_blank" rel="nofollow" class="aclens" data-target="#aclens">AC Lens</a>
+            <a href="https://chase.com" target="_blank" rel="nofollow" class="chase" data-target="#chase">JP Morgan Chase</a>
         </div>
         <div class="item">
             <span>Previously:</span>
